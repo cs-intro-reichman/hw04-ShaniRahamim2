@@ -1,6 +1,7 @@
 public class ArrayOps {
     public static void main(String[] args) {
-        int miss = 0;
+
+/*        int miss = 0;
         int secondMax = 0;
         int[] arry = {4, 5, 0, 1, 2, 6};
         boolean same = false; 
@@ -13,6 +14,8 @@ public class ArrayOps {
         System.out.println(isSorted(array2));
         same = containsTheSameElements(array1, array2);
         System.out.println(same);
+
+ */
        
     }
 
