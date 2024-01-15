@@ -77,20 +77,22 @@ public class StringOps {
 
     public static int[] allIndexOf (String string, char chr) 
     {
-        int count = 0;
-        for(int i=0; i < string.length(); i++)
+    int count = 0;
+    for(int i=0; i < string.length(); i++)
+    {
+        if(string.charAt(i) == chr)
+            count++;
+    }
+    int[] arr = new int[count];
+    int index = 0;
+    for(int i=0; i < string.length(); i++)
+      {
+        if(string.charAt(i) == chr)
         {
-            if(string.charAt(i) == chr)
-                count++;
+          arr[index] = i;
+          index++;
         }
-        int[] arr = new int[count];
-        for(int i = 0; i < count; i++)
-        {
-            if(string.charAt(i) == chr)
-            {
-                arr[i] = i; 
-            }
-        }
-        return arr;
+      }
+    return arr;
     }
 }
