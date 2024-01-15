@@ -22,8 +22,7 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        String str = "Hello  woCrld  DD" ; 
-        System.out.println(camelCase(str)); 
+        System.out.println(allIndexOf("hello world", 'l')); 
     }
 
     public static String lowerCase(String str) {
@@ -77,8 +76,22 @@ public class StringOps {
         return newStr; 
     }
 
-    public static int[] allIndexOf (String string, char chr) {
-        // Write your code here:
-        return new int[1];
+    public static int[] allIndexOf (String string, char chr) 
+    {
+        int count = 0;
+        for(int i=0; i < string.length(); i++)
+        {
+            if(string.charAt(i) == chr)
+                count++;
+        }
+        int[] arr = new int[count];
+        for(int i = 0; i < count; i++)
+        {
+            if(string.charAt(i) == chr)
+            {
+                arr[i] = i; 
+            }
+        }
+        return arr;
     }
 }
