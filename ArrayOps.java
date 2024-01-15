@@ -107,7 +107,7 @@ public class ArrayOps {
             return false;
         }
         else {
-            for(int i = 0; i <= newArray1l; i++){
+            for(int i = 0; i < newArray1l; i++){
                 if(newArray1[i] != newArray2[i]){
                     return false; 
                 }
