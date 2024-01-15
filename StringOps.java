@@ -22,13 +22,40 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        
+        String str = "CsdmDUotri" ; 
+        System.out.println(capVowelsLowRest(str)); 
+    }
+
+    public static String lowerCase(String str) {
+        String newString = ""; 
+        char newChar; 
+        int changer; 
+        for(int i = 0; i < str.length();i++){
+            newChar = str.charAt(i);
+            if(newChar >= 'A' && newChar <= 'Z'){
+                changer = (int)(newChar);
+                changer = changer + 32;
+                newChar = (char)changer; 
+            }
+            newString = newString + newChar;    
+        }
+        return newString;
     }
 
     public static String capVowelsLowRest (String string) {
-        // Write your code here:
-        return "";
-    }
+        int length = string.length(); 
+        String str = lowerCase(string);
+        String newStr = ""; 
+        for(int i = 0; i < length; i++){
+            char newChar = str.charAt(i); 
+            if(str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u'){
+                newChar = (char)(str.charAt(i) - 32);  
+            }
+            newStr =  newStr + newChar; 
+            } 
+            return newStr;
+        }
+       
 
     public static String camelCase (String string) {
         // Write your code here:
