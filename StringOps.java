@@ -22,7 +22,6 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        System.out.println(allIndexOf("hello world", 'l')); 
     }
 
     public static String lowerCase(String str) {
